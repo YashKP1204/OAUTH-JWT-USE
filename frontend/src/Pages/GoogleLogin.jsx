@@ -32,7 +32,6 @@ const GoogleLogin = () => {
   return (
     <div className='App'>
       {!toggle?<Login googleLogin = {googleLogin} setToggle={setToggle} />:<SignUp setToggle={setToggle} />}
-      
     </div>
   )
 }

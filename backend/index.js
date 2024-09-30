@@ -2,12 +2,13 @@ const express = require("express");
 const app = express();
 const main = require("./config/dbConnnection")
 require("dotenv").config();
-const authRouter = require("./route/authrouter");
+const authRouter = require("./route/AuthRoute/authrouter");
 const cors = require("cors");
 
 const PORT = process.env.PORT || 8080;
 
 app.use(cors());
+app.use(express.json());
 app.get("/",(req,res)=>{
     res.send("hello from the server")
 })
